@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import API from '../utils/API'
 import logo from '../assets/jitin.png'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
