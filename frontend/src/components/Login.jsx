@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import API from '../utils/API'
 import { useNavigate } from "react-router-dom";
 import logo from '../assets/jitin.png'
+import axios from 'axios';
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -9,7 +10,7 @@ const Login = () => {
   const submit = async (e) => {
       e.preventDefault();
       try {
-         const res =  await API.post('/login', {email,password});
+         const res =  await axios.post('http://localhost:5000/api/auth/login', {email,password});
          localStorage.setItem('token', res.data.token);
           alert(res.data.message);
           navigate('/dashboard')

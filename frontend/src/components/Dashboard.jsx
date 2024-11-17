@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import API from '../utils/API';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Dashboard = () => {
   const [user, setUser] = useState(null)
@@ -9,7 +10,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await API.get('/profile', {
+        const res = await axios.get('http://localhost:5000/api/auth/profile', {
           headers: { x_auth_token: token },
         });
         setUser(res.data.user)
