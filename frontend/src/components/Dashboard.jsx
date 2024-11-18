@@ -34,7 +34,7 @@ const Dashboard = () => {
         {user ? (
           <main>
             <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-              <h2 className="text-center text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{user.username}</h2>
+              <h2 className="text-center text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"> Welcome {user.username}</h2>
               <p className=" text-center mt-2 text-lg/8 text-gray-600"> {user.email} </p>
               <div className="text-center mt-4">
 
